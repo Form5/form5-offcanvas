@@ -1,0 +1,23 @@
+{
+  "name": "form5-offcanvas",
+  "version": "0.0.1",
+  "description": "jQuery offcanvas plugin",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Form5/form5-offcanvas.git"
+  },
+  "author": "Benedikt D Valdez <benedikt@form5.is>",
+  "contributors": [
+    "Olafur Nielsen <olafur@form5.is>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Form5/form5-offcanvas/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-sass": "~0.9.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.7"
+  }
+}
