@@ -1,0 +1,18 @@
+{
+  "name": "form5-offcanvas",
+  "version": "0.0.1",
+  "homepage": "http://form5.github.io/form5-offcanvas",
+  "authors": [
+    "Benedikt D Valdez <benedikt@form5.is>",
+    "Olafur Nielsen <olafur@form5.is>"
+  ],
+  "description": "jQuery offcanvas plugin",
+  "keywords": [
+    "jquery",
+    "offcanvas"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules"
+  ]
+}
