@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background: #EDEDEB;
+  color: #41485E;
+  font-size: 110%;
+}
+
+.container {
+  width: 700px;
+  min-width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 40px 0 20px 0;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 0 0 20px 0;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+em {
+  font-weight: 700;
+}
+
+a, a:visited {
+  color: #EE6969;
+}
+
+code {
+  background: #fff;
+  border: 1px #d1d1d1 solid;
+  font-family: 'Droid Sans Mono';
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px;
+}
+
+.center {
+  text-align: center;
+}
+
+.button, input[type="button"] {
+  padding: 8px 16px;
+  background: #41485E;
+  border: none;
+  cursor: pointer;
+  color: #EDEDEB;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Open Sans';
+}
+
+.button:hover, input[type="button"]:hover {
+  background: #EE6969;
+}
+
+.gist {
+  margin-bottom: 20px;
+  font-size: 14px;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+      <meta charset="utf-8">
+      <title>form5-offcanvas</title>
+
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans+Mono">
+
+      <link rel="stylesheet" href="styles.css">
+
+      <link rel="stylesheet" href="form5-offcanvas.min.css">
+      <link rel="stylesheet" href="http://form5.github.io/form5-tabs/form5-tabs.min.css">
+  </head>
+  <body>
+
+    <a href="#toggle-canvas" class="toggle-canvas">Toggle canvas</a>
+    <main>
+      <div class="container clearfix">
+        <h1>form5-offcanvas</h1>
+
+        <p>
+          form5-offcanvas is a powerful jQuery plugin that enables you to use an offcanvas sidebar on your site. Only <strong>4KB</strong> of minified Javascript, along with your own styles (very basic demo styles are provided).
+        </p>
+
+        <a href="https://github.com/Form5/form5-offcanvas">
+          <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+        </a>
+
+      <tabs>
+        </tab>
+        <tab>
+          <h2 class="heading">Getting started</h2>
+
+          <h3>How to fetch form5-offcanvas?</h2>
+
+          <p>Install with <a href="http://bower.io">Bower</a>: <code>bower install form5-offcanvas</code></p>
+
+          <p>Clone the Github project: <code>git clone https://github.com/Form5/form5-offcanvas.git</code></p>
+
+          <p>Or <a href="https://github.com/Form5/form5-offcanvas/archive/master.zip">download zip</a>.</p>
+
+          <h3>Then what?</h3>
+
+          <p>
+            After installation simply load the files along with other styles and scripts. Remember that this script requires jQuery, meaning jQuery should already be loaded before this script. We recommend using the latest stable release.
+          </p>
+          <script src="https://gist.github.com/benediktvaldez/6ae4d46ffd96cbf35631.js"></script>
+
+          <p>
+            Construct your content as demonstrated below. In case of disabled javascript, styles should take care of downgrading your sidebar to either visible content or what ever fits your needs. Note that the <code>&lt;offcanvas&gt;</code> element can be literally anything, for example <code>nav</code> or just an old school <code>div</code>. Just make sure to use the appropriate selector when enabling the script.
+          </p>
+          <script src="https://gist.github.com/benediktvaldez/1ae63e12a03d4757298d.js"></script>
+        </tab>
+        <tab>
+          <h2 class="heading">Advanced usage</h2>
+
+          <h3>Options</h3>
+
+          <p>
+            There are a few ways to configure the scripts functionality. Here you can see all the options with their default values, and below you can find more detailed description for each option.
+          </p>
+          <script src="https://gist.github.com/benediktvaldez/2b272fd8cab9f3d6b8c3.js"></script>
+
+          <p><code>toggle: string (selector)</code> <small><strong>Default: '.toggle-canvas'</strong></small></p>
+
+          <p>Selector for elements that should toggle the sidebar, usually some kind of button, obviously depending on your markup.</p>
+
+          <p><code>canvas: array (of selectors)</code> <small><strong>Default: ['main']</strong></small></p>
+
+          <p>An array of elements that should be considered a part of the 'canvas', meaning elements that should be animated to the side on toggle. Usually this should only be the main wrapping element of your page, but sometimes we need to do things like fixed navigation requiring an element to be outside that should still be treated as if it were inside (this is getting way to complicated). Basically, all elements that should be moved out of the way from our offcanvas sidebar. Note: the main wrapping element should be listed first, and the others should follow, if any.</p>
+
+          <p><code>open: function ()</code> <small><strong>Default: function() {}</strong></small></p>
+
+          <p>Optional function to be ran each time the sidebar is opened.</p>
+
+          <p><code>close: function ()</code> <small><strong>Default: function() {}</strong></small></p>
+
+          <p>Optional function to be ran each time the sidebar is closed.</p>
+
+          <p><code>init: function ()</code> <small><strong>Default: function() {}</strong></small></p>
+
+          <p>Optional function to be ran at initialization.</p>
+
+          <p><code>debug: boolean</code> <small><strong>Default: false</strong></small></p>
+
+          <p>If you are having problems and are not sure certain parts of the scripts are actually working, you can enable this option to receive console.logs with messages for initialization, opening, closing and destroying.</p>
+
+          <h3>After initialization</h3>
+
+          <p>
+            For js vs no-js styling, an <code>[alive='true']</code> attribute is included after initialization. See demo styles for an idea of usage.
+          </p>
+
+          <p>
+            To toggle the offcanvas sidebar outside of the default triggers, you can simply call the function again with no options, as demonstrated below. In a similar manner we can explicitly open or close our sidebar by using these helper strings.
+          </p>
+          <script src="https://gist.github.com/benediktvaldez/c6ddee723554db37f9c5.js"></script>
+
+          <p>
+            Sometimes we do things we wish we hadn't, and just wanna take a step back and rethink the situation. For those instances, we included a helper string that enables you to simply reverse all changes made by this script.
+          </p>
+          <script src="https://gist.github.com/benediktvaldez/4ed384e5fa2c08e779c3.js"></script>
+
+          <p>
+            After running this, you can initialize a fresh offcanvas with new options or whatever your mind can imagine.
+          </p>
+
+          <h3>Still not satisfied?</h3>
+
+          <p>
+            You could go all in and customize the script directly. The original can be found in <code>src/form5-offcanvas.js</code>. To compile a minified/uglified version of your new script you can build it again by running:
+          </p>
+          <script src="https://gist.github.com/benediktvaldez/9b1e841a344d244414ab.js"></script>
+
+          <p>
+            If you would like to extend the core functionality of this script in a way that could benefit others, don't hesitate to create a pull request!
+          </p>
+        </tab>
+        <tab>
+          <h2 class="heading">Cress</h2>
+
+          <h3>Using <a href="http://github.com/Form5/Cress" target="_blank">Cress</a>?</h3>
+
+          <p>
+            If you are using our awesome CSS framework Cress, you can find a <code>.scss</code> file using the appropriate variables in <code>src/form5-offcanvas.cress.scss</code>. That way you have a basic offcanvas sidebar working directly with your current styles.
+          </p>
+        </tab>
+        <tab>
+          <h2 class="heading">Author</h2>
+          <p>
+            Written by <a href="http://github.com/benediktvaldez" target="_blank">Benedikt D Valdez</a>,
+            developer at <a href="http://www.form5.is" target="_blank">Form5</a>.
+          </p>
+
+          <h3>Contributors</h3>
+          <p>
+            <a href="http://twitter.com/olafurnielsen" target="_blank">Ólafur Nielsen</a>,
+            co-founder at <a href="http://www.form5.is" target="_blank">Form5</a>.
+          </p>
+        </tab>
+      </tabs>
+
+      </div>
+    </main>
+
+
+    <offcanvas>
+      <ul>
+        <li><a href="#_">Navigation item 1</a></li>
+        <li><a href="#_">Navigation item 2</a></li>
+        <li><a href="#_">Navigation item 3</a></li>
+        <li><a href="#_">Navigation item 4</a></li>
+        <li><a href="#_">Navigation item 5</a></li>
+      </ul>
+    </offcanvas>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="form5-offcanvas.min.js"></script>
+    <script src="http://form5.github.io/form5-tabs/form5-tabs.min.js"></script>
+    <script>
+      $(function(){
+        $('offcanvas').offcanvas({
+          canvas: ['main','.toggle-canvas']
+        });
+        $('tabs').form5Tabs();
+      });
+    </script>
+  </body>
+</html>

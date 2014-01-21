@@ -1,0 +1,64 @@
+[canvas] {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 300ms;
+  -moz-transition: -moz-transform 300ms;
+  -ms-transition: -ms-transform 300ms;
+  -o-transition: -o-transform 300ms;
+  transition: transform 300ms; }
+
+main {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: #ededeb; }
+
+.toggle-canvas {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  padding: 5px 0;
+  width: 80px;
+  height: 50px;
+  line-height: 25px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ededeb;
+  background: #41485e; }
+
+offcanvas {
+  overflow: auto;
+  display: block;
+  background: #41485e;
+  -webkit-font-smoothing: antialiased; }
+  offcanvas[alive='true'] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 290px;
+    min-width: 290px;
+    z-index: 0;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+  offcanvas ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    offcanvas ul > li {
+      display: block; }
+      offcanvas ul > li > a {
+        display: block;
+        padding: 15px 0 15px 40px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: white; }
+        offcanvas ul > li > a:hover {
+          color: #ededeb; }
