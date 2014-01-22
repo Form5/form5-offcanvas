@@ -141,7 +141,9 @@
     attachEvents: function() {
       $(window).on('toggleCanvas', $.proxy(this.toggle,this));
 
-      this.el.toggle.on('click', function() {
+      this.el.toggle.on('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
         $(window).trigger('toggleCanvas');
       });
 
