@@ -40,10 +40,10 @@
       this.setSizes();
     },
 
-    toggle: function(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
+    toggle: function(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
       }
       if (this.state.open) {
         return this.close();
