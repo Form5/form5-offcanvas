@@ -21,10 +21,26 @@ module.exports = function(grunt) {
           'dist/form5-offcanvas.min.js': 'src/form5-offcanvas.js'
         }
       }
+    },
+    jshint: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: ['*.js'],
+            dest: 'dist/'
+          }
+        ],
+        options: {
+          jshintrc: '.jshintrc' // Read hinting options from .jshintrc
+        }
+      }
     }
   });
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  return grunt.registerTask('build', ['sass', 'cssmin', 'uglify']);
+  return grunt.registerTask('build', ['sass', 'cssmin', 'jshint', 'uglify']);
 };
