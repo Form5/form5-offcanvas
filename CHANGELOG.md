@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.0 - 2014-01-23
+- Feature: Allow for optional custom callback on resize
+
 ## v1.0.1 - 2014-01-22
 - Patch: Prevent default functionality of toggle element on click.
 

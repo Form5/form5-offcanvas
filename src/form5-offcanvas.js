@@ -7,6 +7,7 @@
       canvas: ['main'],
       open: function(){},
       close: function(){},
+      resize: function(){},
       init: function(){},
       debug: false
     };
@@ -158,6 +159,9 @@
       clearTimeout(this.resizeTimeout);
       this.resizeTimeout = setTimeout($.proxy(function() {
         this.setSizes();
+        if (typeof this.options.resize === 'function') {
+          this.options.resize();
+        }
         if (this.el.toggle.css('display') === 'none' && this.state.open) {
           return this.close();
         }

@@ -94,6 +94,10 @@ Optional function to be ran each time the sidebar is opened.
 
 Optional function to be ran each time the sidebar is closed.
 
+`resize: function ()` **Default: function() {}**
+
+Optional function to be ran each time the window is resized.
+
 `init: function ()` **Default: function() {}**
 
 Optional function to be ran at initialization.
