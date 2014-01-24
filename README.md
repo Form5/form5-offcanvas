@@ -161,9 +161,13 @@ using the appropriate variables in `src/form5-offcanvas.cress.scss`. That way
 you have a basic offcanvas sidebar working directly with your current styles.
 
 ## Author
-Written by [Benedikt D Valdez](http://github.com/benediktvaldez), developer at
-[Form5](http://www.form5.is).
+
+Written by [Form5](http://www.form5.is).
 
 ### Contributors
+
+[Benedikt D Valdez](http://github.com/benediktvaldez), developer at
+[Form5](http://www.form5.is).
+
 [Olafur Nielsen](http://twitter.com/olafurnielsen), co-founder at
 [Form5](http://www.form5.is).

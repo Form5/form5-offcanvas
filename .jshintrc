@@ -5,7 +5,8 @@
     "location",
     "setTimeout",
     "$",
-    "console"
+    "console",
+    "module"
   ],
   "node" : false,
   "jquery" : true,
