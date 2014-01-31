@@ -36,6 +36,10 @@
       if (this.debug) console.log('init offcanvas', this);
 
       this.$offcanvas.attr('alive',true);
+
+      this.uniqueID = new Date().getTime();
+      this.$offcanvas.data('uniqueID',this.uniqueID);
+
       this.processSelectors();
       this.attachEvents();
       this.setSizes();
@@ -74,6 +78,10 @@
           this.el.toggle.attr('open',true);
         }, this), 250);
       },this));
+      openCB.add($.proxy(function() {
+        this.resizeTimeout = 0;
+        $(window).on('resize.offCanvasResize_' + this.uniqueID, $.proxy(this.onResize, this));
+      },this));
       if (typeof this.options.open === 'function') {
         openCB.add($.proxy(this.options.open,this));
       }
@@ -100,6 +108,9 @@
           this.el.toggle.attr('moving',false);
           this.el.toggle.attr('open',false);
         }, this), 250);
+      },this));
+      closeCB.add($.proxy(function() {
+        $(window).off('resize.offCanvasResize_' + this.uniqueID);
       },this));
       if (typeof this.options.close === 'function') {
         closeCB.add($.proxy(this.options.close,this));
@@ -140,19 +151,14 @@
     },
 
     attachEvents: function() {
-      $(window).on('toggleCanvas', $.proxy(this.toggle,this));
-
-      this.el.toggle.on('click', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        $(window).trigger('toggleCanvas');
-      });
-
-      this.resizeTimeout = 0;
-      $(window).on('offCanvasResize', $.proxy(this.onResize, this));
-      $(window).on('resize scroll', function() {
-        $(window).trigger('offCanvasResize');
-      }).trigger('resize');
+      this.el.toggle.on(
+        'click.toggleCanvas_' + this.uniqueID,
+        $.proxy(function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          this.toggle();
+        },this)
+      );
     },
 
     onResize: function() {
