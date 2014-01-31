@@ -110,10 +110,10 @@
     setBodyPosition: function(num) {
       $.each(this.el.canvas, $.proxy(function(index, el) {
         $(el).css(this.css.translate(num));
-        if (!$('html').hasClass('noscroll') ? num > 0 : void 0) {
+        if (num !== 0) {
           $('html,body').addClass('noscroll');
         }
-        if ($('html').hasClass('noscroll') ? num === 0 : void 0) {
+        if (num === 0) {
           $('html,body').removeClass('noscroll');
         }
       }, this));
